@@ -49,12 +49,12 @@ if (key_exists("q", $_GET)) {
         $results = $loader->getResults($_GET["q"]);
         if (count($results) == 0 )
         {
-            echo "Sorry no results for " . $_GET["q"]."</BR>";
+            echo "Sorry no results for " . $_GET["q"].".</BR>";
         } else {
             echo "Results for " . $_GET["q"]."</BR>";
             foreach( $results as $result)
             {
-                echo '<a href="'.$result["url"].'">'. $result["url"]. "</a><BR/>";
+                echo '<a href="'.$result["url"].'">'. $result["url"]. "</a> matched ".$result["value"]."<BR/>";
             }
         }
         ?>
